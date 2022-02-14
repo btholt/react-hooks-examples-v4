@@ -8,7 +8,7 @@ const useIsRaining = () => {
     // instead we're just going to fake it
 
     setIsRaining(Math.random() > 0.5);
-  });
+  }, []);
 
   useDebugValue(isRaining ? "Is Raining" : "Is Not Raining");
 

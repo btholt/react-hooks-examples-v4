@@ -1,4 +1,4 @@
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom";
 import State from "./State";
 import Effect from "./Effect";
 import Context from "./Context";
@@ -9,6 +9,7 @@ import Callback from "./Callback";
 import LayoutEffect from "./LayoutEffect";
 import ImperativeHandle from "./ImperativeHandle";
 import DebugValue from "./DebugValue";
+import Id from "./Id";
 
 import "./styles.css";
 
@@ -34,9 +35,12 @@ function App() {
       <ImperativeHandle />
       <hr />
       <DebugValue />
+      <hr />
+      <Id />
     </div>
   );
 }
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(<App />);
